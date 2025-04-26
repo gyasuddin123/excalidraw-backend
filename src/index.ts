@@ -45,7 +45,8 @@ const io = socketIO(server, {
 
 // listens on host:9090/metrics
 prometheus.metrics(io, {
-    collectDefaultMetrics: true
+    collectDefaultMetrics: true,
+    port:9100
 });
 
 io.on('connection', socket => {
