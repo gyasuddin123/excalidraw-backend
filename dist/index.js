@@ -41,6 +41,7 @@ app.get('/', function (req, res) {
 });
 var server = http_1.default.createServer(app);
 server.listen(port, function () {
+    console.log("Excalidraw backend is up on port " + port);
     serverDebug("listening on port: " + port);
 });
 var io = socket_io_1.default(server, {
